@@ -193,4 +193,33 @@ else say it's not fierce"
 (type-of-animal 'zebra)
 ;; "It’s not fierce!"
 
-;; Page 39: TBC
+(if 4
+    'true
+  'false)
+;; true
+
+(if nil
+    'true
+  'false)
+;; false
+
+;; save-excursion
+(message "We are %d characters into this buffer."
+         (- (point)
+            (save-excursion
+             (goto-char (point-min)) (point))))
+;; "We are 4585 characters into this buffer."
+
+emacs-version 
+;; "25.1.50.1"
+
+emacs-major-version 
+;; 25
+
+emacs-minor-version
+;; 1
+
+(if (= 25 emacs-major-version)
+    (message "This is version 25 Emacs")
+  (message "This is not version 25 Emacs"))
+;; "This is version 25 Emacs"
