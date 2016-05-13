@@ -223,3 +223,11 @@ emacs-minor-version
     (message "This is version 25 Emacs")
   (message "This is not version 25 Emacs"))
 ;; "This is version 25 Emacs"
+
+;; switch back to the last location with `C-x Cx`
+(defun simplified-beginning-of-buffer ()
+  "Move point to the beginning of the buffer;
+leave mark at previous point"
+  (interactive)
+  (push-mark) ;;
+  (goto-char (point-min)))
